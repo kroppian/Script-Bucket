@@ -30,4 +30,15 @@ echo file.{jpeg,png,gif,bmp}
 echo file{1..3}.jpeg
 # => file1.jpeg file2.jpeg file3.jpeg
 
+###########################################################################################
+#
+# One lined for loop
+#
+# I've written multilined for loops in bash about a billion times, but I can never remember
+# where to put the semicolons in a one line for loop. 
+#
+# This particular example was used to delete all the files owned by me in a directory with 
+# too many files to pass into one command (argument list too long error).
+# 
+for file in  $(ls -l | awk '/kroppi/ {print $9}' ); do rm -v $file; done
 
