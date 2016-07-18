@@ -1,0 +1,14 @@
+" Change the file type. Helpful when syntax highlighting is screwed up
+:set filetype=twig
+
+" Classic ignore case
+:set ignorecase 
+:set ignorecase !
+
+" Line wrapping
+:set wrap
+:set wrap !
+
+" Line breaking (good for when reading text)
+:set linebreak
+
