@@ -15,6 +15,12 @@ ls -ld $(find /path/to/files/) | awk '/drwxrwsr-x/ {print $9}'
 
 # Pretty neat, right?
 
+###########################################################################################
+#
+# Here's another awk one-liner to list every file that is within size constraints. The fact
+# that I could skip writing a full bash script to make conditionals is a pleasure. 
+
+ls -l  /path/to/files/* | awk '{if ($5 < 1000000 && $5 != 0) print $9}'
 
 ###########################################################################################
 #
