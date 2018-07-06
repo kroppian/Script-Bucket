@@ -24,6 +24,12 @@ ls -l  /path/to/files/* | awk '{if ($5 < 1000000 && $5 != 0) print $9}'
 
 ###########################################################################################
 #
+# If you're trying to do some light validation on a CSV file, here's a command to find 
+# lines that don't have the expected number of fields (183 in this example)
+awk -F, '{print FILENAME " " NF}' /path/to/files/* | grep -v '183'
+
+###########################################################################################
+#
 # Bracket Expansion
 #
 # I'm a bit embarrassed to admit that I never knew you could do this:  
